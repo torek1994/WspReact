@@ -5,7 +5,7 @@ import Respuesta from './Respuesta'
 function Bloque (props){
     return(
         <div>
-            <Pregunta/><br/>
+            <Pregunta pregunta = {props.pregunta}/><br/>
             <Respuesta/><br/>
         </div>
     )

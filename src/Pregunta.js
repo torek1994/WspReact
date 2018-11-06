@@ -10,7 +10,7 @@ function Pregunta (props){
         borderRadius: '8px',
     } */
     return(
-        <div className="EstiloPregunta">Pregunta</div>
+        <div className="EstiloPregunta"><div>{props.pregunta}</div></div>
     )
 }
 
