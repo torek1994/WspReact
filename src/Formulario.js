@@ -20,7 +20,6 @@ handleSubmit = (e) => {
     e.preventDefault();
     let elemento = this.isNullOrWhiteSpace(this.state.texto);
     if(!elemento){
-        console.log(this.target)
         this.props.addForm(this.state);
         this.setState({
             texto: ''
@@ -32,8 +31,8 @@ handleSubmit = (e) => {
     render(){
         return(
             <div className="row">
-                <form>
-                    <div className="input-field col s10" onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
+                    <div className="input-field col s10">
                         <input type="text" id="mensaje" className="white-text" onChange={this.handleChange} value={this.state.texto}/>
                         <label htmlFor="mensaje" className="grey-text text-lighten-1">Escribe tu mensaje</label>
                     </div>

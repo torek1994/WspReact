@@ -10,9 +10,9 @@ class Caja extends Component{
     }
     
     addForm = (pregunta) => {
-        let preguntas = [...this.state.preguntas, pregunta];
+        let preguntasAux = [...this.state.preguntas, pregunta];
         this.setState({
-            preguntas:preguntas
+            preguntas:preguntasAux
         })
     }
     
@@ -24,9 +24,9 @@ class Caja extends Component{
         height: '880px',
         paddingTop: '10px',
         paddingLeft: '5px',
-            paddingRight: '5px',
-            paddingBottom: '20px'
-          };
+        paddingRight: '5px',
+        paddingBottom: '20px'
+        };
         
         let bloques = this.state.preguntas.map((pregunta) =>
           <Bloque key={pregunta.texto} pregunta={pregunta.texto}/>
